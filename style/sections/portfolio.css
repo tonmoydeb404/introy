@@ -1,0 +1,47 @@
+.portfolio_cards {
+  @apply flex flex-col gap-5;
+}
+
+.portfolio_card {
+  @apply flex flex-col md:flex-row md:odd:flex-row-reverse items-stretch gap-5 p-2.5 md:p-5 border border-neutral-200 rounded-xl shadow-sm bg-white;
+}
+
+.portfolio_card_media {
+  @apply w-full md:w-1/2 overflow-hidden rounded-lg;
+}
+
+.portfolio_card_media > img {
+  @apply w-full h-full;
+}
+
+.portfolio_card_body {
+  @apply flex-1 flex flex-col;
+}
+
+.portfolio_card_tags {
+  @apply flex items-center flex-wrap gap-1 text-xs uppercase mb-5;
+}
+
+.portfolio_card_tags > span {
+  @apply px-2 py-1 border border-neutral-200 inline-block rounded-sm;
+}
+
+.portfolio_card_title {
+  @apply text-xl font-bold mb-2;
+}
+
+.portfolio_card_text {
+  @apply mb-5;
+}
+
+.portfolio_card_links {
+  @apply flex flex-wrap items-center justify-end gap-x-1 gap-y-1.5 mt-auto;
+}
+
+.portfolio_card_link {
+  @apply duration-300 px-4 py-2 text-sm uppercase bg-white hover:bg-neutral-50 border border-neutral-200 rounded font-bold;
+}
+
+.portfolio_card_link.primary {
+  @apply border-blue-500 bg-blue-600 hover:bg-blue-700 text-white;
+}

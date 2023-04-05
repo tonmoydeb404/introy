@@ -1,0 +1,23 @@
+.contact_cards {
+  @apply flex flex-col md:flex-row md:items-center gap-10;
+}
+
+.contact_card {
+  @apply flex items-center gap-2 md:gap-3;
+}
+
+.contact_card_icon {
+  @apply w-[45px] h-[45px] md:w-[60px] md:h-[60px] rounded-full duration-300 bg-white hover:bg-neutral-50 border border-neutral-200 inline-flex items-center justify-center text-blue-600;
+}
+
+.contact_card_body {
+  @apply flex flex-col gap-0 md:gap-1;
+}
+
+.contact_card_title {
+  @apply text-sm md:text-base uppercase font-bold;
+}
+
+.contact_card_text {
+  @apply font-semibold text-neutral-600 hover:text-blue-600;
+}

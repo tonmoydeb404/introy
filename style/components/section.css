@@ -1,0 +1,11 @@
+.section {
+  @apply py-[70px] md:py-[100px];
+}
+
+.section_title {
+  @apply text-2xl font-bold;
+}
+
+.section_subtitle {
+  @apply text-lg uppercase font-extrabold text-blue-600;
+}

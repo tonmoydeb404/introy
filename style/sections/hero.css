@@ -1,0 +1,23 @@
+.hero > .container {
+  @apply py-16 flex flex-col-reverse gap-10 text-center md:text-left md:flex-row items-center md:justify-between;
+}
+
+.hero_title {
+  @apply text-3xl md:text-5xl font-black mb-5 leading-tight;
+}
+
+.hero_text {
+  @apply mb-5;
+}
+
+.hero_links {
+  @apply flex items-center justify-center md:justify-start text-3xl gap-4;
+}
+
+.hero_links > a {
+  @apply duration-300 hover:text-blue-600;
+}
+
+.hero_avatar > img {
+  @apply w-[200px] md:w-[250px] rounded-lg;
+}

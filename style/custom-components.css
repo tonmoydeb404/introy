@@ -1,0 +1,11 @@
+/* component styles */
+@import "./components/section.css";
+
+/* section style */
+@import "./sections/navbar.css";
+@import "./sections/hero.css";
+@import "./sections/tech-stack.css";
+@import "./sections/about.css";
+@import "./sections/portfolio.css";
+@import "./sections/contact.css";
+@import "./sections/footer.css";

@@ -1,0 +1,5 @@
+@import "/node_modules/tailwindcss/base.css";
+@import "./custom-base.css";
+@import "/node_modules/tailwindcss/components.css";
+@import "./custom-components.css";
+@import "/node_modules/tailwindcss/utilities.css";

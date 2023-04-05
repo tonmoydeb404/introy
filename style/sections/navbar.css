@@ -1,0 +1,29 @@
+.navbar {
+  @apply sticky top-0 bg-white border-b border-b-neutral-200 z-[1000];
+}
+
+.navbar > .container {
+  @apply flex items-center justify-between py-2 md:py-4;
+}
+
+.navbar_brand {
+  @apply text-xl font-bold uppercase z-[1];
+}
+
+.navbar_toggler {
+  @apply text-2xl px-2 py-1 border border-neutral-200 rounded md:hidden z-[2];
+}
+
+.navbar_links {
+  @apply items-center gap-x-10 font-semibold hidden md:flex;
+  @apply flex flex-col absolute top-0 left-0 w-full bg-white py-8 gap-y-7 mt-[1px] -translate-y-full duration-300;
+  @apply md:flex-row md:static md:top-auto md:left-auto md:bg-transparent md:py-0 md:mt-0 md:translate-y-0 md:duration-0 md:w-auto;
+}
+
+.navbar_links.show {
+  @apply top-full translate-y-0 -z-[1];
+}
+
+.navbar_links a {
+  @apply duration-300 hover:text-blue-600;
+}

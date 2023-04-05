@@ -1,0 +1,19 @@
+.about > .container {
+  @apply grid grid-cols-12 gap-y-10 md:gap-y-0 md:gap-x-10;
+}
+
+.about_img {
+  @apply col-span-12 md:col-span-5;
+}
+
+.about_img > img {
+  @apply w-full md:h-full md:object-cover md:object-center rounded-xl;
+}
+
+.about_content {
+  @apply col-span-12 md:col-span-7 flex flex-col;
+}
+
+.about_text {
+  @apply text-neutral-600 leading-relaxed w-full;
+}

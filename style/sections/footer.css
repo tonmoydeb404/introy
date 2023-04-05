@@ -1,0 +1,19 @@
+.footer {
+  @apply bg-neutral-900 text-white;
+}
+
+.footer > .container {
+  @apply py-16 gap-10 flex flex-col md:flex-row text-center md:text-left items-center justify-between;
+}
+
+.footer_text {
+  @apply md:text-lg font-bold;
+}
+
+.footer_links {
+  @apply flex items-center gap-5 text-2xl;
+}
+
+.footer_links > a {
+  @apply duration-300 hover:text-blue-600;
+}

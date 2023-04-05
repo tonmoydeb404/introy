@@ -1,0 +1,7 @@
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply font-open-sans bg-neutral-50 text-neutral-800;
+}

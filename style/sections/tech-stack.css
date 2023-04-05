@@ -1,0 +1,23 @@
+.tech-stack > .container {
+  @apply flex flex-col md:flex-row text-center md:text-left items-center gap-2 md:gap-10 py-10;
+}
+
+.tech-stack_title {
+  @apply font-bold text-lg;
+}
+
+.tech-stack_divider {
+  @apply w-[100px] h-0.5 md:h-[20px] md:w-0.5 bg-neutral-800 mb-5 md:mb-0;
+}
+
+.tech-stack_content {
+  @apply flex flex-wrap justify-center md:justify-start items-center gap-4;
+}
+
+.tech-stack_item {
+  @apply w-[50px] h-[50px] inline-flex items-center justify-center rounded-full bg-white ring-1 ring-gray-300 shadow-sm;
+}
+
+.tech-stack_item > img {
+  @apply max-w-full;
+}
