@@ -1,0 +1,11 @@
+[
+  { "title": "HTML", "icon": "devicon-html5-plain colored" },
+  { "title": "CSS", "icon": "devicon-css3-plain colored" },
+  { "title": "JavaScript", "icon": "devicon-javascript-plain colored" },
+  { "title": "TypeScript", "icon": "devicon-typescript-plain colored" },
+  { "title": "React JS", "icon": "devicon-react-original colored" },
+  { "title": "Next JS", "icon": "devicon-nextjs-plain colored" },
+  { "title": "TailwindCSS", "icon": "devicon-tailwindcss-original colored" },
+  { "title": "Node JS", "icon": "devicon-nodejs-plain colored" },
+  { "title": "Express JS", "icon": "devicon-express-original colored" }
+]

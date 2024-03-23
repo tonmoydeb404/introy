@@ -15,7 +15,7 @@
 }
 
 .tech-stack_item {
-  @apply w-[50px] h-[50px] inline-flex items-center justify-center rounded-full bg-white ring-1 ring-gray-300 shadow-sm;
+  @apply w-[50px] h-[50px] inline-flex items-center justify-center rounded-full bg-white ring-1 ring-gray-300 shadow-sm text-2xl cursor-pointer duration-200 hover:ring-4;
 }
 
 .tech-stack_item > img {

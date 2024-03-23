@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Finsweet",
+    "description": "A fully functional digital agency template. This is for any agencies who wants to sell their services online. Using this template agencies can showcase their services, reviews, blogs etc.",
+    "source": "https://github.com/tonmoydeb404/finsweet",
+    "preview": "https://finsweet-td.netlify.app/",
+    "tags": ["html", "tailwindcss"],
+    "thumbnail": "/images/project/finsweet.webp"
+  },
+  {
+    "title": "Track Taka",
+    "description": "Track Taka is an expense tracker application to help you in daily life money management. It allows you to track your regular expenses & income. so at the end of the month, you can quickly get a summary of your monthly expense.",
+    "source": "https://github.com/tonmoydeb404/track-taka",
+    "preview": "https://track-taka.netlify.app/",
+    "tags": ["react js", "tailwindcss", "indexeddb", "firebase"],
+    "thumbnail": "/images/project/track-taka.jpg"
+  },
+  {
+    "title": "ZenBlog",
+    "description": "This is a simple SEO-friendly blog application. Which is developed with Next.js and HyGraph. This is a practice project where I tried to implement all the necessary features a blog should have.",
+    "source": "https://github.com/tonmoydeb404/zen-blog",
+    "preview": "https://zenblog.vercel.app/",
+    "tags": ["nextjs", "tailwindcss", "hygraph"],
+    "thumbnail": "/images/project/zenblog.jpg"
+  },
+  {
+    "title": "Movie Mania",
+    "description": "this is a movie and tv show search web app. you can watch trailers and get an overview of specific movies or tv shows. also, you can get similar movies or tv show suggestions.",
+    "source": "https://github.com/tonmoydeb404/movie-mania",
+    "preview": "https://td-movie-mania.netlify.app/",
+    "tags": ["reactjs", "materialui", "api"],
+    "thumbnail": "/images/project/movie-mania.jpg"
+  }
+]

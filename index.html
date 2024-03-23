@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introy - Clean Portfolio Template</title>
+    <title><%= website.title %></title>
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,6 +12,20 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <!-- devicons css -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- boxicons css -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <!-- bootstrap icons css -->
     <link
       rel="stylesheet"
@@ -26,7 +40,7 @@
     <!-- navbar start -->
     <nav class="navbar">
       <div class="container">
-        <a href="/" class="navbar_brand">Introy</a>
+        <a href="/" class="navbar_brand"><%= sections.nav.title %></a>
         <button
           title="Open Menu"
           type="button"
@@ -36,10 +50,13 @@
           <i class="bi bi-list"></i>
         </button>
         <ul class="navbar_links" id="mobileMenu">
-          <li><a href="/#home">Home</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/#portfolio">Projects</a></li>
-          <li><a href="/#contact">Contact</a></li>
+          <% nav.forEach((item) => { %>
+          <li>
+            <a title="<%= item.title %>" href="<%= item.link %>">
+              <%= item.title %>
+            </a>
+          </li>
+          <% }); %>
         </ul>
       </div>
     </nav>
@@ -50,24 +67,27 @@
       <div class="container">
         <!-- text content -->
         <div class="hero_content">
-          <h2 class="hero_title">Front-End React<br />Developer</h2>
-          <p class="hero_text">
-            Hi, I'm Tonmoy Deb. A passionate Front-end React<br />Developer from
-            Sylhet, Bangladesh.
-          </p>
+          <h2 class="hero_title"><%= sections.hero.title %></h2>
+          <p class="hero_text"><%= sections.hero.text %></p>
           <div class="hero_links">
-            <a href="https://github.com/tonmoydeb404" target="_blank">
-              <i class="bi bi-github"></i>
+            <% socials.forEach((item) => { %>
+            <a
+              href="<%= item.link %>"
+              title="<%= item.title %>"
+              target="_blank"
+            >
+              <i class="<%= item.icon %>"></i>
             </a>
-            <a href="https://linkedin.com/in/tonmoydeb" target="_blank">
-              <i class="bi bi-linkedin"></i>
-            </a>
+            <% }); %>
           </div>
         </div>
 
         <!-- avatar -->
         <div class="hero_avatar">
-          <img src="/images/avatar/tonmoy.jpg" alt="Avatar" />
+          <img
+            src="<%= sections.hero.image %>"
+            alt="<%= sections.hero.title %>"
+          />
         </div>
       </div>
     </header>
@@ -79,42 +99,11 @@
         <h2 class="tech-stack_title">Tech Stack</h2>
         <div class="tech-stack_divider"></div>
         <div class="tech-stack_content">
-          <div class="tech-stack_item">
-            <img src="/images/tech/html.svg" alt="HTML" class="w-[25px]" />
+          <% skills.forEach((skill) => { %>
+          <div class="tech-stack_item" title="<%= skill.title %>">
+            <i class="<%= skill.icon %>"></i>
           </div>
-          <div class="tech-stack_item">
-            <img src="/images/tech/css.svg" alt="CSS" class="w-[25px]" />
-          </div>
-          <div class="tech-stack_item">
-            <img
-              src="/images/tech/javascript.svg"
-              alt="JavaScript"
-              class="w-[25px]"
-            />
-          </div>
-          <div class="tech-stack_item">
-            <img
-              src="/images/tech/typescript.svg"
-              alt="TypeScript"
-              class="w-[25px]"
-            />
-          </div>
-          <div class="tech-stack_item">
-            <img src="/images/tech/react.svg" alt="React JS" class="w-[30px]" />
-          </div>
-          <div class="tech-stack_item">
-            <img src="/images/tech/nextjs.svg" alt="Next JS" class="w-[30px]" />
-          </div>
-          <div class="tech-stack_item">
-            <img
-              src="/images/tech/tailwindcss.svg"
-              alt="TailwindCSS"
-              class="w-[30px]"
-            />
-          </div>
-          <div class="tech-stack_item">
-            <img src="/images/tech/sass.svg" alt="SASS" class="w-[30px]" />
-          </div>
+          <% }); %>
         </div>
       </div>
     </div>
@@ -125,21 +114,16 @@
       <div class="container section">
         <!-- about image -->
         <div class="about_img">
-          <img src="/images/about.webp" alt="About Me" />
+          <img
+            src="<%= sections.about.image %>"
+            alt="<%= sections.about.title %>"
+          />
         </div>
         <!-- about text content -->
         <div class="about_content">
-          <h3 class="section_subtitle mb-1">About me</h3>
-          <h2 class="section_title mb-5">
-            A dedicated Front-end Developer from Sylhet Bangladesh
-          </h2>
-          <p class="about_text">
-            I love to solve problems and build web applications. I'm passionate
-            about front-end development. I have a good understanding in HTML,
-            CSS, JavaScript, TypeScript, React JS, Next JS, TailwindCSS, Sass.
-            My main goal is creating smooth, interctive, & user friendly
-            interface using best development tools & language.
-          </p>
+          <h3 class="section_subtitle mb-1"><%= sections.about.sutitle %></h3>
+          <h2 class="section_title mb-5"><%= sections.about.title %></h2>
+          <p class="about_text"><%= sections.about.text %></p>
         </div>
       </div>
     </div>
@@ -148,39 +132,36 @@
     <!-- portfolio section start -->
     <div id="portfolio" class="portfolio">
       <div class="container section">
-        <h3 class="section_subtitle mb-1">Portfolio</h3>
-        <h2 class="section_title mb-16">
-          Each project is a unique piece of development
-        </h2>
+        <h3 class="section_subtitle mb-1">
+          <%= sections.portfolio.subtitle %>
+        </h3>
+        <h2 class="section_title mb-16"><%= sections.portfolio.title %></h2>
 
         <!-- portfolio cards-->
         <div class="portfolio_cards">
+          <% projects.forEach((project) => { %>
           <div class="portfolio_card">
             <div class="portfolio_card_media">
-              <img src="/images/project/finsweet.webp" alt="Finsweet" />
+              <img src="<%= project.thumbnail %>" alt="<%= project.title %>" />
             </div>
             <div class="portfolio_card_body">
               <div class="portfolio_card_tags">
-                <span>#html</span>
-                <span>#tailwindcss</span>
+                <% project.tags.forEach((tag) => { %>
+                <span>#<%= tag %></span>
+                <% }); %>
               </div>
-              <h2 class="portfolio_card_title">Finsweet</h2>
-              <p class="portfolio_card_text">
-                A fully functional digital agency template. This is for any
-                agencies who wants to sell their services online. Using this
-                template agencies can showcase their services, reviews, blogs
-                etc.
-              </p>
+              <h2 class="portfolio_card_title"><%= project.title %></h2>
+              <p class="portfolio_card_text"><%= project.description %></p>
 
               <div class="portfolio_card_links">
                 <a
-                  href="https://github.com/tonmoydeb404/finsweet"
+                  href="<%= project.source %>"
                   target="_blank"
                   class="portfolio_card_link"
                   >Source Code <i class="bi bi-code"></i>
                 </a>
                 <a
-                  href="https://finsweet-td.netlify.app/"
+                  href="<%= project.preview %>"
                   target="_blank"
                   class="portfolio_card_link primary"
                   >Preview <i class="bi bi-eye"></i>
@@ -188,111 +169,7 @@
               </div>
             </div>
           </div>
-
-          <div class="portfolio_card">
-            <div class="portfolio_card_media">
-              <img src="/images/project/track-taka.jpg" alt="Track Taka" />
-            </div>
-            <div class="portfolio_card_body">
-              <div class="portfolio_card_tags">
-                <span>#react js</span>
-                <span>#tailwindcss</span>
-                <span>#indexeddb</span>
-                <span>#firebase</span>
-              </div>
-              <h2 class="portfolio_card_title">Track Taka</h2>
-              <p class="portfolio_card_text">
-                Track Taka is an expense tracker application to help you in
-                daily life money management. It allows you to track your regular
-                expenses & income. so at the end of the month, you can quickly
-                get a summary of your monthly expense.
-              </p>
-
-              <div class="portfolio_card_links">
-                <a
-                  href="https://github.com/tonmoydeb404/track-taka"
-                  target="_blank"
-                  class="portfolio_card_link"
-                  >Source Code <i class="bi bi-code"></i>
-                </a>
-                <a
-                  href="https://track-taka.netlify.app/"
-                  target="_blank"
-                  class="portfolio_card_link primary"
-                  >Preview <i class="bi bi-eye"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio_card">
-            <div class="portfolio_card_media">
-              <img src="/images/project/zenblog.jpg" alt="ZenBlog" />
-            </div>
-            <div class="portfolio_card_body">
-              <div class="portfolio_card_tags">
-                <span>#nextjs</span>
-                <span>#tailwindcss</span>
-                <span>#hygraph</span>
-              </div>
-              <h2 class="portfolio_card_title">ZenBlog</h2>
-              <p class="portfolio_card_text">
-                This is a simple SEO-friendly blog application. Which is
-                developed with Next.js and HyGraph. This is a practice project
-                where I tried to implement all the necessary features a blog
-                should have.
-              </p>
-
-              <div class="portfolio_card_links">
-                <a
-                  href="https://github.com/tonmoydeb404/zen-blog"
-                  target="_blank"
-                  class="portfolio_card_link"
-                  >Source Code <i class="bi bi-code"></i>
-                </a>
-                <a
-                  href="https://zenblog.vercel.app/"
-                  target="_blank"
-                  class="portfolio_card_link primary"
-                  >Preview <i class="bi bi-eye"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio_card">
-            <div class="portfolio_card_media">
-              <img src="/images/project/movie-mania.jpg" alt="Movie Mania" />
-            </div>
-            <div class="portfolio_card_body">
-              <div class="portfolio_card_tags">
-                <span>#reactjs</span>
-                <span>#materialui</span>
-                <span>#api</span>
-              </div>
-              <h2 class="portfolio_card_title">Movie Mania</h2>
-              <p class="portfolio_card_text">
-                this is a movie and tv show search web app. you can watch
-                trailers and get an overview of specific movies or tv shows.
-                also, you can get similar movies or tv show suggestions.
-              </p>
-
-              <div class="portfolio_card_links">
-                <a
-                  href="https://github.com/tonmoydeb404/movie-mania"
-                  target="_blank"
-                  class="portfolio_card_link"
-                  >Source Code <i class="bi bi-code"></i>
-                </a>
-                <a
-                  href="https://td-movie-mania.netlify.app/"
-                  target="_blank"
-                  class="portfolio_card_link primary"
-                  >Preview <i class="bi bi-eye"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+          <% }); %>
         </div>
       </div>
     </div>
@@ -301,39 +178,29 @@
     <!-- contact section start -->
     <div id="contact" class="contact bg-white">
       <div class="container section">
-        <h3 class="section_subtitle mb-1">Contact</h3>
-        <h2 class="section_title mb-5">Don't be shy! Hit me up! 👇</h2>
+        <h3 class="section_subtitle mb-1"><%= sections.contact.subtitle %></h3>
+        <h2 class="section_title mb-5"><%= sections.contact.title %></h2>
 
         <!-- contact cards -->
         <div class="contact_cards mt-16">
+          <% contacts.forEach((contact) => { %>
           <div class="contact_card">
             <div class="contact_card_icon">
-              <i class="bi bi-at text-3xl md:text-4xl"></i>
+              <i class="<%= contact.icon %> text-3xl md:text-4xl"></i>
             </div>
             <div class="contact_card_body">
-              <h2 class="contact_card_title">Email</h2>
+              <h2 class="contact_card_title"><%= contact.title %></h2>
               <a
-                href="mailto:tonmoydeb404@gmail.com"
+                href="<%= contact.link %>"
                 target="_blank"
                 class="contact_card_text"
-                >tonmoydeb404@gmail.com</a
+                title="<%= contact.title  %>"
               >
+                <%= contact.text %>
+              </a>
             </div>
           </div>
-          <div class="contact_card">
-            <div class="contact_card_icon">
-              <i class="bi bi-whatsapp text-2xl md:text-3xl"></i>
-            </div>
-            <div class="contact_card_body">
-              <h2 class="contact_card_title">Whatsapp</h2>
-              <a
-                href="https://wa.me/8801571362609"
-                target="_blank"
-                class="contact_card_text"
-                >+8801571362609</a
-              >
-            </div>
-          </div>
+          <% }); %>
         </div>
       </div>
     </div>
@@ -342,15 +209,16 @@
     <!-- footer section start -->
     <footer class="footer">
       <div class="container">
-        <p class="footer_text">Copyright © 2023. All rights are reserved</p>
+        <p class="footer_text">
+          Copyright ©<%= new Date().getFullYear() %>. All rights are reserved
+        </p>
 
         <div class="footer_links">
-          <a href="https://github.com/tonmoydeb404" target="_blank">
-            <i class="bi bi-github"></i>
+          <% socials.forEach((item) => { %>
+          <a href="<%= item.link %>" title="<%= item.title %>">
+            <i class="<%= item.icon %>"></i>
           </a>
-          <a href="https://linkedin.com/in/tonmoydeb" target="_blank">
-            <i class="bi bi-linkedin"></i>
-          </a>
+          <% }); %>
         </div>
       </div>
     </footer>
