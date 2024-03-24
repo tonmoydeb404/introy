@@ -15,8 +15,5 @@
     "vite": "^4.2.0",
     "vite-plugin-html": "^3.2.2"
   },
-  "dependencies": {
-    "bootstrap-icons": "^1.10.4",
-    "devicons": "^1.8.0"
-  }
+  "dependencies": {}
 }
