@@ -12,8 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <!-- devicons css -->
 
+    <!-- devicons css -->
     <link
       rel="stylesheet"
       type="text/css"
@@ -26,11 +26,6 @@
       rel="stylesheet"
     />
 
-    <!-- bootstrap icons css -->
-    <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"
-    />
     <!-- custom css -->
     <link rel="stylesheet" href="./style/style.css" />
     <!-- custom js -->
@@ -47,7 +42,7 @@
           class="navbar_toggler"
           id="menuToggler"
         >
-          <i class="bi bi-list"></i>
+          <i class="bx bx-menu"></i>
         </button>
         <ul class="navbar_links" id="mobileMenu">
           <% nav.forEach((item) => { %>
@@ -158,13 +153,13 @@
                   href="<%= project.source %>"
                   target="_blank"
                   class="portfolio_card_link"
-                  >Source Code <i class="bi bi-code"></i>
+                  >Source Code <i class="bx bx-git-branch"></i>
                 </a>
                 <a
                   href="<%= project.preview %>"
                   target="_blank"
                   class="portfolio_card_link primary"
-                  >Preview <i class="bi bi-eye"></i>
+                  >Preview <i class="bx bx-link-external"></i>
                 </a>
               </div>
             </div>
