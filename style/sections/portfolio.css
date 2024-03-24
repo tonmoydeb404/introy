@@ -45,3 +45,7 @@
 .portfolio_card_link.primary {
   @apply border-blue-500 bg-blue-600 hover:bg-blue-700 text-white;
 }
+
+.portfolio_card_link > i {
+  @apply text-base;
+}

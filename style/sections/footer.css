@@ -11,7 +11,7 @@
 }
 
 .footer_links {
-  @apply flex items-center gap-5 text-2xl;
+  @apply flex items-center gap-5 text-4xl;
 }
 
 .footer_links > a {

@@ -11,7 +11,7 @@
 }
 
 .hero_links {
-  @apply flex items-center justify-center md:justify-start text-3xl gap-4;
+  @apply flex items-center justify-center md:justify-start text-4xl gap-4;
 }
 
 .hero_links > a {
